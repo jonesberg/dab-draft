@@ -13,7 +13,7 @@ my_job = job.Job {
             spark_python_task = {
                 python_file = "test.py"
             }
-        },
+        }
         task.RunJobTask {
             task_key = "1"
             run_job_task = {

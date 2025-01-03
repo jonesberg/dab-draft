@@ -15,7 +15,7 @@ schema RunAs:
         The email of an active workspace user. Non-admin users can only set this
         field to their own email.
     """
-    service_principal_name: str
-    user_name: str
+    service_principal_name?: str
+    user_name?: str
 
 # TODO: Guard so only one of the two can be filled.

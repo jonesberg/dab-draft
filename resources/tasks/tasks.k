@@ -1,6 +1,13 @@
 import .base_task
 
-type Task = SparkPythonTask | SqlTask | RunJobTask
+# TODO ConditionTask
+# TODO DbtTask
+# TODO ForEachTask
+# TODO PythonWheel
+# TODO NotebookTask
+# TODO SparkJarTask
+# TODO SparkSubmitTask
+type Task = SparkPythonTask | SqlTask | RunJobTask | PipelineTask
 
 schema SparkPythonTask(base_task.BaseTask):
     spark_python_task: SparkPythonTaskParams
@@ -162,3 +169,4 @@ schema PipelineTaskParams(PipelineTaskRunParams):
         The full name of the pipeline task to execute.
     """
     pipeline_id: str
+

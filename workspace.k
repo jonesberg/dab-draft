@@ -1,32 +1,18 @@
 schema Workspace:
     artifact_path?: str
     auth_type?: str
-    azure_client_id: any
-    str
-    azure_environment: any
-    str
-    azure_login_app_id: any
-    str
-    azure_tenant_id: any
-    str
-    azure_use_msi: any
-    bool
-    azure_workspace_resource_id: any
-    str
-    client_id: any
-    str
-    file_path: any
-    str
-    google_service_account: any
-    str
-    host: any
-    str
-    profile: any
-    str
-    resource_path: any
-    str
-    root_path: any
-    str
-    state_path: any
-    str
+    azure_client_id?: str
+    azure_environment?: str
+    azure_login_app_id?: str
+    azure_tenant_id?: str
+    azure_use_msi?: bool
+    azure_workspace_resource_id?: str
+    client_id?: str
+    file_path?: str
+    google_service_account?: str
+    host?: str
+    profile?: str
+    resource_path?: str
+    root_path?: str
+    state_path?: str
 

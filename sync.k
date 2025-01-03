@@ -1,5 +1,5 @@
 schema Sync:
-    exclude: [str]
-    include: [str]
-    paths: [str]
+    exclude?: [str]
+    include?: [str]
+    paths?: [str]
 

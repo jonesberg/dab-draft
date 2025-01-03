@@ -1,3 +1,4 @@
+# Artifact is an additional property type of object
 schema Artifact:
     build?: str
     executable?: str

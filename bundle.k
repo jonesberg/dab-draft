@@ -10,3 +10,11 @@ schema Git:
     branch?: str
     origin_url?: str
 
+schema Deployment:
+    fail_on_active_runs?: bool
+    lock?: Lock
+
+schema Lock:
+    enabled?: bool
+    force?: bool
+
