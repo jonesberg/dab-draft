@@ -8,15 +8,15 @@ Compared to the YAML approach, dab-draft in my opinion provides
 * Strong typing and value validation through the pre-processor (when applicable)
 * Better re-usability across bundle defition through cleaner imports and variable expansion (when applicable).
 
-Most of the advantages are provided by the Pkl configuration language directly.
+Most of the advantages are provided by the KCL configuration language directly.
 
-dab-draft is **not** a replacement for the Databricks CLI. It simply takes your configuration files in `pkl` format and generates the `databricks.yml` that is used for assets bundle definition.
+dab-draft is **not** a replacement for the Databricks CLI. It simply takes your configuration files in the KCL format and generates the `databricks.yml` that is used for assets bundle definition.
 
 ## How to use
 
-*Right now, I do not recommend you use this just yet for your `databricks.yml` generation.*
+*Please note that dab-draft isn't 100% feature complete regarding the Databricks Assets Bundle.*
 
-**TODO**: Instructions
+TODO
 
 ## What works?
 
