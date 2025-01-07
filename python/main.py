@@ -1,3 +1,10 @@
+"""Helper file to disambiguate the DB schema and generate the KCL source.
+
+TODO: Better documentation about how to use it, docstrings, unit tests,
+automation
+
+"""
+
 import json
 from pathlib import Path
 
@@ -41,6 +48,8 @@ def process_type(t):
 
 
 def clean_object(obj, i=0):
+    # Avoiding infinite loops because the DAB schema trampolines between
+    # concepts back-and-forth.
     if i > 10:
         return obj
 
