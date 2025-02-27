@@ -14,18 +14,28 @@ dab-draft is **not** a replacement for the Databricks CLI. It simply takes your 
 
 ## How to use
 
-*Please note that dab-draft isn't 100% feature complete regarding the Databricks Assets Bundle.*
+_Note: I plan on writing a quick tutorial on how to use KCL in the context of dab-draft. In the meantime, review their [excellent tutorial](https://www.kcl-lang.io/docs/user_docs/getting-started/kcl-quick-start)!_
 
-While this project is in alpha, there is not automated way to download and import the package. To use (or test) it, follow these instructions.
+Create two files at the root of your project.
 
-1. Clone this repository
-2. _From the project where you plan to generate your `databricks.yml`, run the `kcl mod add ${DIRECTORY WHERE DAB-DRAFT IS DOWNLOADED}`
-3. Use `kcl run ${YOUR KCL FILE} -o databricks.yml`
+- `kcl.mod`
+- `main.k` (you can call it whatever you want)
 
+Then import dab-draft using the command line
+
+``` sh
+kcl mod add dab-draft
+```
+
+The `main.k` file in this repository gives a very simple example of using dab-draft to generate a bundle. To create the `databricks.yml` file:
+
+``` sh
+kcl main.k -o databricks.yml
+```
 
 ## What works?
 
-Currently, most of the objects for doing basic data engineering tasks are working. See the documentation under `doc/dab-draft.md` for a detailled list of the objects and their attributes. This includes the following
+Currently, most of the objects for doing the tasks I'm interested in are working. See the documentation under `doc/dab-draft.md` for a detailled list of the objects and their attributes. This includes the following
 
 * bundle
 * artifact
