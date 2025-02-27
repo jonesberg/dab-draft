@@ -1,4 +1,4 @@
-# Note: in the top-level bundle file, `permissions` is a List of Permission.
+# Note: in the top-level bundle file, `permissions` is a List of Permissions
 schema Permission:
     group_name?: str
     level: str

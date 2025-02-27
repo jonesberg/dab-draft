@@ -155,6 +155,7 @@ schema Job:
     git_source?: GitSource
     health?: job_utils.Health
     # job_clusters?: [JobCluster] TODO CHECK IF IT'S THE SAME AT THE `CLUSTER DEFINITION`
+    # "$ref": "#/$defs/slice/github.com/databricks/databricks-sdk-go/service/jobs.JobCluster"
     max_concurrent_runs?: int
     name?: str
     notification_settings?: job_utils.NotificationSettings

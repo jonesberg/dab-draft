@@ -219,12 +219,13 @@ schema InitScript:
     # TODO file?: object
     # TODO gcs?: object
     s3?: S3
-    # TODO volumes?: object
-    # TODO workspace?: object
 
+# TODO volumes?: object
+# TODO workspace?: object
 schema WorkloadType:
     client: WorkloadTypeClient
 
 schema WorkloadTypeClient:
     jobs: bool
     notebooks: bool
+

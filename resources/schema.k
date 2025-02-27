@@ -20,6 +20,6 @@ schema Schema:
     storage_root?: str
 
 schema Grant:
-    principal: [str]
+    principal: str
     privileges: [str]
 
