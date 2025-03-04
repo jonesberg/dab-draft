@@ -4,7 +4,10 @@ schema RunAs:
     as the user who created the job/pipeline.
 
     Exactly one of `user_name`, `service_principal_name`, `group_name` should be
-    specified. If not, an error is thrown.',
+    specified. If not, an error is thrown.
+
+    (Note: `group_name` is not listed as an attribute in the DAB Schema. Kept
+    the documentation in line with the schema.)
 
     Attributes
     ----------

@@ -27,23 +27,24 @@ schema CRAN:
     repo?: str
 
 schema Maven:
-    """Specification of a maven library to be installed. For example:\n`{ "coordinates": "org.jsoup:jsoup:1.7.2" }`'},
+    """Specification of a maven library to be installed. For example: `{ "coordinates": "org.jsoup:jsoup:1.7.2" }`.
 
     Attributes
     ----------
         coordinates: str
-            Gradle-style maven coordinates. For example: "org.jsoup:jsoup:1.7.2".'},
+            Gradle-style maven coordinates. For example: "org.jsoup:jsoup:1.7.2".
         exclusion: [str]
-            List of dependences to exclude. For example: `["slf4j:slf4j", "*:hadoop-client"]`.\n\nMaven dependency exclusions:\nhttps://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html.'},
+            List of dependences to exclude. For example: `["slf4j:slf4j", "*:hadoop-client"]`.
+            Maven dependency exclusions: https://maven.apache.org/guides/introduction/introduction-to-optional-and-excludes-dependencies.html
         repo: str
-            Maven repo to install the Maven package from. If omitted, both Maven Central Repository\nand Spark Packages are searched.'}},
+            Maven repo to install the Maven package from. If omitted, both Maven Central Repository\nand Spark Packages are searched.
     """
     coordinates: str
     exclusion?: [str]
     repo?: str
 
 schema PyPI:
-    """Specification of a PyPi library to be installed. For example:\n`{ "package": "simplejson" }`'},
+    """Specification of a PyPi library to be installed. For example: `{ "package": "simplejson" }`'},
 
     Attributes
     ----------
@@ -76,6 +77,10 @@ schema WebhookNotifications:
 
 schema BaseTask:
     """
+
+    Attributes
+    ----------
+
     depends_on?
     description?: str
         An optional description for this task.

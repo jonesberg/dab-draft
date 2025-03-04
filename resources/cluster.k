@@ -6,6 +6,7 @@ schema Cluster:
 
     Attributes
     ----------
+
     apply_policy_default_values?: bool
     autoscale?
     autotermination_minutes?: int
@@ -106,36 +107,36 @@ schema Autoscale:
     min_workers?: int
 
 schema AWSAttributes:
-    """
-    availability?
-        Availability type used for all subsequent nodes past the `first_on_demand` ones.
+    """AWS Attributes
 
+    Attributes
+    ----------
+    availability: "SPOT" | "ON_DEMAND" | "SPOT_WITH_FALLBACK"
+        Availability type used for all subsequent nodes past the `first_on_demand` ones.
         Note: If `first_on_demand` is zero, this availability type will be used for the entire cluster.
-    ebs_volume_count?: int
-    ebs_volume_iops?: int
-    ebs_volume_size?: int
-    ebs_volume_throughput?: int
-    ebs_volume_type?
+    ebs_volume_count: int
+    ebs_volume_iops: int
+    ebs_volume_size: int
+    ebs_volume_throughput: int
+    ebs_volume_type: "GENERAL_PURPOSE_SSD" | "THROUGHPUT_OPTIMIZED_HDD"
         The type of EBS volumes that will be launched with this cluster.
-    first_on_demand?: int
-    instance_profile_arn?: str
+    first_on_demand: int
+    instance_profile_arn: str
         Nodes for this cluster will only be placed on AWS instances with this
         instance profile. If ommitted, nodes will be placed on instances without
         an IAM instance profile. The instance profile must have previously been
         added to the Databricks environment by an account administrator.
-
         This feature may only be available to certain customer plans.
-
         If this field is ommitted, we will pull in the default from the conf if it exists.
-    spot_bid_price_percent?: int
-    zone_id?: str
+    spot_bid_price_percent: int
+    zone_id: str
         Identifier for the availability zone/datacenter in which the cluster
-        resides. This string will be of a form like "us-west-2a". The provided
+        resides. This string will be of a form like `us-west-2a`. The provided
         availability zone must be in the same region as the Databricks
-        deployment. For example, "us-west-2a" is not a valid zone id if the
-        Databricks deployment resides in the "us-east-1" region. This is an
+        deployment. For example, `us-west-2a` is not a valid zone id if the
+        Databricks deployment resides in the `us-east-1` region. This is an
         optional field at cluster creation, and if not specified, a default zone
-        will be used. If the zone specified is "auto", will try to place cluster
+        will be used. If the zone specified is `auto`, will try to place cluster
         in a zone with high availability, and will retry placement in a
         different AZ if there is not enough capacity. The list of available
         zones as well as the default value can be found by using the `List
@@ -158,8 +159,10 @@ schema ClusterLogConf:
 
 schema DBFS:
     """
+
     Attributes
     ----------
+
     destination: str
         dbfs destination, e.g. `dbfs:/my/path`
     """
@@ -167,6 +170,10 @@ schema DBFS:
 
 schema S3:
     """
+
+    Attributes
+    ----------
+
     canned_acl?: str
         (Optional) Set canned access control list for the logs, e.g. `bucket-owner-full-control`.
         If `canned_cal` is set, please make sure the cluster iam role has `s3:PutObjectAcl` permission on
@@ -202,6 +209,8 @@ schema S3:
 
 schema DockerImage:
     """
+    Attributes
+    ----------
     basic_auth?
     url?: str
         URL of the docker image.
